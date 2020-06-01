@@ -17,6 +17,8 @@ nnoremap <Leader>pt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 nnoremap <Leader>al :GoAlternate<CR>
 nnoremap <Leader>gt :GoTest<CR>
+nnoremap <Leader>= :vertical resize+5<CR>
+nnoremap <Leader>- :vertical resize-5<CR>
 
 " Misc
 set noerrorbells
