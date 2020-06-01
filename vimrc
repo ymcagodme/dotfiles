@@ -1,4 +1,6 @@
 syntax on
+let mapleader=" "
+let g:mapleader=" "
 
 " <leader>/ turn off search highlighting
 nnoremap <leader>/ :nohl<CR>
@@ -10,8 +12,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Remap
-let mapleader=" "
-let g:mapleader=" "
 nnoremap <slient> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <Leader>pt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
