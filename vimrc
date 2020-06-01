@@ -52,6 +52,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer' }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
 
 " Google vim-codefmt
 Plug 'google/vim-maktaba'
