@@ -12,7 +12,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Remap
-nnoremap <slient> <Leader>gd :YcmCompleter GoTo<CR>
+nnoremap <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <Leader>pt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 nnoremap <Leader>al :GoAlternate<CR>
