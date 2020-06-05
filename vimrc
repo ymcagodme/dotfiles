@@ -58,10 +58,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 
-" Google vim-codefmt
+" Google 
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'bazelbuild/vim-bazel'
 
 " Language specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
