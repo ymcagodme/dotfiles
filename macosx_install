@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+# Inspired by ThePrimeagen@github. All credits to him :D
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="nvim"
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
+export STOW_FOLDERS=$STOW_FOLDERS
+export DOTFILES=$DOTFILES
+$DOTFILES/install
