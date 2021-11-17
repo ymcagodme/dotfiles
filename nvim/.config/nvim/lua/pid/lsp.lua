@@ -56,3 +56,4 @@ cmp.setup({
 
 -- Python support.
 require('lspconfig').pylsp.setup{config()}
+require('lspconfig').pyright.setup{config()}

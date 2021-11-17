@@ -6,18 +6,19 @@ source $HOME/.config/nvim/plugins.vim
 
 " Read vimrc recursively (in folders)
 set exrc
+" Don't unload a buffer when no longer shown in a window
+set hidden
+" Keep 8 lines margin
+set scrolloff=8
+" Have a sign column on the left to indicate status
+set signcolumn=yes
+set mouse=a
 set nu
 set relativenumber
 set nohlsearch
-" Don't unload a buffer when no longer shown in a window
-set hidden
 set noerrorbells
 set nowrap
-" Keep 8 lines margin
-set scrolloff=8
 set colorcolumn=80
-" Have a sign column on the left to indicate status
-set signcolumn=yes
 
 " Tab settings
 " ------------
