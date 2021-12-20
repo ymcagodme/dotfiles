@@ -4,15 +4,12 @@ local function config(_config)
 	}, _config or {})
 end
 
--- Setup nvim-cmp.
+-- Remember to install nerd-fonts:
+--   https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
+local lspkind = require("lspkind")
+
+-- Setup nvim-cmp globally.
 local cmp = require("cmp")
-local source_mapping = {
-	buffer = "[Buffer]",
-	nvim_lsp = "[LSP]",
-	nvim_lua = "[Lua]",
-	cmp_tabnine = "[TN]",
-	path = "[Path]",
-}
 
 cmp.setup({
 	snippet = {
@@ -38,19 +35,38 @@ cmp.setup({
           c = cmp.mapping.close(),
         }),
 	},
+    formatting = {
+        format = lspkind.cmp_format({
+            with_text = true,
+            preset = 'codicons',
+
+            before = function (entry, vim_item)
+                vim_item.menu = ({
+                    nvim_lsp = "[LSP]",
+                    treesitter = "[TS]",
+                    vsnip = "[Snippet]",
+                    buffer = "[Buffer]",
+                    path = "[Path]",
+                    spell = "[Spell]",
+                })[entry.source.name]
+                return vim_item
+            end
+        })
+    },
 	sources = {
 		{ name = "nvim_lsp" },
-
-		-- For vsnip user.
-		{ name = 'vsnip' },
-
-		-- For luasnip user.
-		-- { name = "luasnip" },
-
-		-- For ultisnips user.
-		-- { name = 'ultisnips' },
-
-		{ name = "buffer" },
+        { name = "treesitter" },
+        { name = "vsnip" },
+        { name = "path" },
+        {
+          name = "buffer",
+          option = {
+            get_bufnrs = function()
+              return vim.api.nvim_list_bufs()
+            end,
+          },
+        },
+        { name = "spell" }
 	},
 })
 
