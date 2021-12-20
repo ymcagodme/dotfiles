@@ -32,4 +32,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   " Airline status bar.
   Plug 'vim-airline/vim-airline'
 
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-fugitive'
+  Plug 'numToStr/Comment.nvim'
+
+
 call plug#end()
