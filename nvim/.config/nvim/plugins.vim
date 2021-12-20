@@ -42,4 +42,6 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'numToStr/Comment.nvim'
 
+  Plug 'ray-x/lsp_signature.nvim'
+
 call plug#end()
