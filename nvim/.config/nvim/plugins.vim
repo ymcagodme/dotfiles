@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   " Telescope: Fuzzy finder.
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
   " Tree-sitter support.
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
