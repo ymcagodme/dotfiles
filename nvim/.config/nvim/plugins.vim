@@ -10,6 +10,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
   " LSP support.
   Plug 'neovim/nvim-lspconfig'
+  Plug 'onsails/lspkind-nvim'
 
   " Auto completion.
   Plug 'hrsh7th/nvim-cmp'
@@ -40,6 +41,5 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   Plug 'numToStr/Comment.nvim'
-  Plug 'onsails/lspkind-nvim'
 
 call plug#end()
