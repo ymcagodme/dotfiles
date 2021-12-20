@@ -18,7 +18,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
 
-  " Snippet feature.
+  " Snippet feature (required by auto comletion).
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
 
@@ -26,6 +26,10 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'gruvbox-community/gruvbox'
 
   " Formatter
-  Plug 'sbdchd/neoformat'
+  Plug 'google/vim-maktaba'
+  Plug 'google/vim-codefmt'
+
+  " Airline status bar.
+  Plug 'vim-airline/vim-airline'
 
 call plug#end()
