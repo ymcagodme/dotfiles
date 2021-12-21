@@ -3,6 +3,8 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   " Telescope: Fuzzy finder.
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  " Chose over fzy sorter because this supports fzf syntax:
+  " https://github.com/junegunn/fzf#search-syntax
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
   " Tree-sitter support.
@@ -32,8 +34,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
   Plug 'gruvbox-community/gruvbox'
 
   " Formatter
-  Plug 'google/vim-maktaba'
-  Plug 'google/vim-codefmt'
+  " Plug 'google/vim-maktaba'
+  " Plug 'google/vim-codefmt'
+  Plug 'sbdchd/neoformat'
 
   " Airline status bar.
   Plug 'vim-airline/vim-airline'
