@@ -32,19 +32,23 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
   " gruvbox colorscheme.
   Plug 'gruvbox-community/gruvbox'
+  Plug 'Mofiqul/dracula.nvim'
 
   " Formatter
   " Plug 'google/vim-maktaba'
   " Plug 'google/vim-codefmt'
   Plug 'sbdchd/neoformat'
 
-  " Airline status bar.
-  Plug 'vim-airline/vim-airline'
+  " Status bar.
+  " Plug 'vim-airline/vim-airline'
+  Plug 'nvim-lualine/lualine.nvim'
 
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-fugitive'
   Plug 'numToStr/Comment.nvim'
-
+  Plug 'tpope/vim-surround'
   Plug 'ray-x/lsp_signature.nvim'
+
+  " Git relating
+  Plug 'tpope/vim-fugitive'
+  Plug 'lewis6991/gitsigns.nvim'
 
 call plug#end()

@@ -3,7 +3,7 @@
 # Inspired by ThePrimeagen@github. All credits to him :D
 
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="nvim"
+    STOW_FOLDERS="nvim, alacritty"
 fi
 
 if [[ -z $DOTFILES ]]; then
