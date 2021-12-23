@@ -19,7 +19,7 @@ require("telescope").setup({
 
         -- winblend: Transparency
         winblend = 0,
-        file_ignore_patterns = {"venv/", "__pycache__/", "*.pyc"},
+        file_ignore_patterns = { ".git", "venv", "__pycache__", "%.pyc"},
 
         file_previewer = require("telescope.previewers").vim_buffer_cat.new,
         grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
@@ -39,11 +39,20 @@ require("telescope").setup({
 require('telescope').load_extension('fzf')
 
 local M = {}
-M.search_dotfiles = function()
+M.search_nvim_config = function()
     require("telescope.builtin").find_files({
         prompt_title = "< VimRC > ",
         cwd = '~/.config/nvim',
         file_ignore_patterns = {"autoload/", "undodir"},
+        hidden = true,
+    })
+end
+
+M.search_dotfiles = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< dotfiles > ",
+        cwd = '~/.dotfiles',
+        file_ignore_patterns = { ".git", "venv", "__pycache__", "%.pyc", "autoload", "undodir"},
         hidden = true,
     })
 end
