@@ -45,7 +45,7 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
   Plug 'numToStr/Comment.nvim'
   Plug 'tpope/vim-surround'
-  Plug 'ray-x/lsp_signature.nvim'
+  Plug 'windwp/nvim-autopairs'
 
   " Git relating
   Plug 'tpope/vim-fugitive'
