@@ -29,7 +29,7 @@
 " endfun
 " call ColorMyPencils()
 
-colorscheme dracula
+" colorscheme dracula
 
 " set background=dark
 " colorscheme gruvbox

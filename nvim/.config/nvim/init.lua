@@ -1,0 +1,11 @@
+require "user.options"
+require "user.keymaps"
+require "user.colorscheme"
+
+require "user.plugins"
+require "user.treesitter"
+require "user.telescope"
+require "user.cmp"
+require "user.lsp"
+require "user.autopairs"
+require "user.lualine"
