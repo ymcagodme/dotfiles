@@ -28,7 +28,7 @@ cmp.setup {
   formatting = {
     format = lspkind.cmp_format({
         with_text = true,
-        preset = 'codicons',
+        -- preset = 'codicons',
 
         before = function (entry, vim_item)
             vim_item.menu = ({
