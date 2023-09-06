@@ -11,16 +11,35 @@ local options = {
 	errorbells = false,
 	wrap = false,
 	colorcolumn = "80",
+
 	-- Read vimrc recursively (in folders)
 	exrc = true,
+
 	-- Don't unload a buffer when no longer shown in a window
 	hidden = true,
+
 	-- Keep 8 lines margin
 	scrolloff = 8,
+
 	-- Have a sign column on the left to indicate status
 	signcolumn = "yes",
+
 	-- faster completion (4000ms default)
-	updatetime = 300,
+	updatetime = 250,
+	timeoutlen = 300,
+
+	-- Enable break indent
+	breakindent = true,
+
+	-- Case-insensitive searching UNLESS \C or capital in search
+	ignorecase = true,
+	smartcase = true,
+	
+	-- Set completeopt to have a better completion experience
+	completeopt = 'menuone,noselect',
+
+	-- NOTE: You should make sure your terminal supports this
+	termguicolors = true,
 
 	-- Tab settings
 	tabstop = 4,
@@ -39,3 +58,14 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})

@@ -15,9 +15,12 @@ telescope.setup {
     color_devicons = true,
     file_ignore_patterns = { ".git", "venv", "__pycache__", "%.pyc", "node_modules"},
 
-    -- file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-    -- grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-    -- qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+    mappings = {
+      i = {
+        ['<C-u>'] = false,
+        ['<C-d>'] = false,
+      },
+    },
   },
   pickers = {
     find_files = {
@@ -26,10 +29,16 @@ telescope.setup {
     live_grep = {
       theme = "dropdown"
     },
+    grep_string = {
+      theme = "dropdown"
+    },
     buffers = {
       theme = "dropdown"
     },
     help_tags = {
+      theme = "dropdown"
+    },
+    diagnostics = {
       theme = "dropdown"
     },
   },
